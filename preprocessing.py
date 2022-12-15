@@ -3,12 +3,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-train = pd.read_csv("symptom_data.csv")
+df = pd.read_csv("symptom_data.csv")
 
-print(train["TYPE"].value_counts())
+df = df.drop(range(0, 15357))
+df = df.drop(range(18429, 43429))
 
-train = train.drop(range(0, 15357))
-print(train)
-train = train.drop(range(18429, 43429))
+df.to_csv('under-sampled.csv', index=False)
 
-print(train["TYPE"].value_counts())
+

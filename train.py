@@ -9,11 +9,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn import preprocessing
 from sklearn.metrics import classification_report, confusion_matrix
 
-train = pd.read_csv("symptom_data.csv")
-
-train = train.drop(range(0, 15357))
-print(train)
-train = train.drop(range(18429, 43429))
+train = pd.read_csv("under-sampled.csv")
 
 X = train.drop("TYPE", axis=1)
 y = train["TYPE"]
@@ -28,11 +24,5 @@ print(classification_report(y_test, predictions))
 print(confusion_matrix(y_test, predictions))
 
 
-df = pd.read_csv("test.csv")
-print(df)
-
-print(model.predict(df))
-
-filename = 'model.sav'
+filename = 'lrmodel.sav'
 pickle.dump(model, open(filename, 'wb'))
-# plt.show()
