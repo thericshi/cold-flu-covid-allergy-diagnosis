@@ -1,0 +1,69 @@
+body {
+    font-family: Raleway;
+    text-align: left;
+}
+div[id="buttons"] {
+    width: 60%;
+}
+h1 {
+    text-align: left;
+    color: #333;
+    font-size: 2.5rem;
+    margin-left: 15%;
+    letter-spacing: .04rem;
+}
+form {
+    width: 65%;
+    text-align: left;
+    font-family: Open Sans;
+    margin-left: 15%;
+    font-size: 1.125rem;
+}
+
+textarea {
+    width: 60%;
+    height: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    border-radius: 4px;
+    background-color: #06c;
+    color: white;
+    font-size: 18px;
+    font-color: #fff;
+    font-family: Open Sans SemiBold;
+    cursor: pointer;
+}
+input[type="reset"] {
+    padding: 10px 20px;
+    border-radius: 4px;
+    background-color: #8F8F8F;
+    color: white;
+    font-size: 18px;
+    font-color: #fff;
+    font-family: Open Sans SemiBold;
+    cursor: pointer;
+    float: right;
+}
+h2 {
+    text-align: left;
+    color: #333;
+    margin-top: 50px;
+    margin-left: 15%;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-left: 15%;
+}
+li {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+}

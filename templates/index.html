@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Respiratory Diagnosis</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+</head>
+<div style="background-color: black; height: 40px; width: 100%;"></div>
+<body>
+<h1>Respiratory Diagnosis</h1>
+    <form method="post">
+        <label for="symptom_description">Enter a description of your symptoms:</label><br>
+        <textarea id="symptom_description" name="symptom_description"></textarea><br>
+        <div id="buttons">
+            <input id="sub_btn" type="submit" value="Submit">
+            <input id="clear_btn" type="reset" value="Clear">
+        </div>
+    </form>
+
+{% if symptoms %}
+<script>
+      var symptoms = {{ symptoms|tojson }};
+</script>
+<script type="text/javascript"
+        src="{{ url_for('static', filename='submit.js') }}"></script>
+{% endif %}
+
+{% if not symptoms%}
+
+{% elif symptoms|length > 0 and symptoms[0] != 'None' %}
+
+<h2>Found Symptoms:</h2>
+<ul>
+    {% for symptom in symptoms %}
+    <li>{{ symptom }}</li>
+    {% endfor %}
+</ul>
+<h2>Result: {{ result }}<h2>
+
+{% elif symptoms[0] == 'None' %}
+<h2>No symptoms were found.</h2>
+{% endif %}
+
+</body>
+</html>
