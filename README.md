@@ -20,7 +20,6 @@ The following list of packages is required to run the flask application:
 - regex
 - scikit-learn
 - flask
-- pickle
 
 ## Usage
 To run the flask application:
