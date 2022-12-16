@@ -3,7 +3,7 @@
 This Flask application predicts a patient's most likely respiratory condition (common cold, flu, COVID-19, or allergy) with a 96% accuracy based a description of their symptoms. Various natural language processing techniques are used to ensure an accurate extraction of symptoms from the description. 
 
 ## Demo
-A short demonstration of the basic functionalities of the application
+A short video (11 sec) demonstration of the basic functionalities of the application
 
 https://user-images.githubusercontent.com/99521397/208178609-fb63ed6c-c6e5-4ac2-b9e0-8244beca6422.mov
 
